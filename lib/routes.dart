@@ -4,11 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:flutterperu/main.dart';
 import 'package:flutterperu/jose.dart';
 import 'package:flutterperu/test.dart';
-<<<<<<< HEAD
-import 'jeremypage.dart';
-=======
+import 'package:flutterperu/jeremypage.dart';
 import 'package:flutterperu/david.dart';
->>>>>>> c92018fed61947fc9e4e438c551069d43bf502d2
 
 class RouteConstants {
   static const String homeRouteName = '/home/';
