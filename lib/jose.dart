@@ -3,45 +3,22 @@ import 'package:flutterperu/routes.dart';
 
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [BottomNavigationBar].
 
-class JosePage extends StatelessWidget {
+class JosePage extends StatefulWidget {
+
+  const JosePage({Key? key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello, World!'),
-        ),
-        body: Center(
-          child: BottomNavigationBarExampleApp(),
-        ),
-      ),
-    );
+  State<JosePage> createState() => _JosePageState();
+}
+
+class _JosePageState extends State<JosePage> {
+
+  @override
+  void initState() {
+    super.initState();
   }
-}
 
-class BottomNavigationBarExampleApp extends StatelessWidget {
-  const BottomNavigationBarExampleApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: BottomNavigationBarExample(),
-    );
-  }
-}
-
-class BottomNavigationBarExample extends StatefulWidget {
-  const BottomNavigationBarExample({super.key});
-
-  @override
-  State<BottomNavigationBarExample> createState() =>
-      _BottomNavigationBarExampleState();
-}
-
-class _BottomNavigationBarExampleState
-    extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
