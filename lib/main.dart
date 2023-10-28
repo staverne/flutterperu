@@ -16,19 +16,19 @@ class MyApp extends StatelessWidget {
     final router = MyRouter().getRouter();
     final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
     return MaterialApp.router(
-        title: 'Flutter peru',
-        theme: ThemeData(
-           useMaterial3: true,
-           colorSchemeSeed: Colors.red,
-           brightness: Brightness.light,
-        ),
-        themeMode: ThemeMode.system,
-        // Router
-        routeInformationParser: router.routeInformationParser,
-        routerDelegate: router.routerDelegate,
-        // Global context
-        scaffoldMessengerKey: scaffoldMessengerKey,
-        );
+      title: 'Flutter peru',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.red,
+        brightness: Brightness.light,
+      ),
+      themeMode: ThemeMode.system,
+      // Router
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
+      // Global context
+      scaffoldMessengerKey: scaffoldMessengerKey,
+    );
   }
 }
 
@@ -109,28 +109,28 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             TextButton(
-               onPressed: () {
-                 GoRouter.of(context).pushNamed(RouteConstants.carlosRouteName);
-               },
-               child: const Text('Carlos'),
+              onPressed: () {
+                GoRouter.of(context).pushNamed(RouteConstants.carlosRouteName);
+              },
+              child: const Text('Carlos'),
             ),
             TextButton(
-               onPressed: () {
-                 GoRouter.of(context).pushNamed(RouteConstants.davidRouteName);
-               },
-               child: const Text('David'),
+              onPressed: () {
+                GoRouter.of(context).pushNamed(RouteConstants.davidRouteName);
+              },
+              child: const Text('David'),
             ),
             TextButton(
-               onPressed: () {
-                 GoRouter.of(context).pushNamed(RouteConstants.joseRouteName);
-               },
-               child: const Text('José'),
+              onPressed: () {
+                GoRouter.of(context).pushNamed(RouteConstants.joseRouteName);
+              },
+              child: const Text('José'),
             ),
             TextButton(
-               onPressed: () {
-                 GoRouter.of(context).pushNamed(RouteConstants.jeremyRouteName);
-               },
-               child: const Text('Jeremy'),
+              onPressed: () {
+                GoRouter.of(context).pushNamed(RouteConstants.jeremyRouteName);
+              },
+              child: const Text('Jeremy'),
             ),
           ],
         ),
