@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutterperu/main.dart';
+import 'package:flutterperu/jose.dart';
 import 'package:flutterperu/test.dart';
 
 class RouteConstants {
@@ -28,7 +29,7 @@ class MyRouter {
           name: RouteConstants.joseRouteName,
           path: '/jose',
           pageBuilder: (context, state) {
-            return MaterialPage(child: TestPage());
+            return MaterialPage(child: JosePage());
           },
         ),
         GoRoute(
@@ -58,3 +59,6 @@ class MyRouter {
   }
 
 }
+
+
+
