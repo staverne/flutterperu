@@ -1,4 +1,7 @@
+import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterperu/routes.dart';
+import 'package:flutterperu/test.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,29 +13,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+    final router = MyRouter().getRouter();
+    final scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
+    return MaterialApp.router(
+        title: 'Flutter peru',
+        theme: ThemeData(
+           useMaterial3: true,
+           colorSchemeSeed: Colors.red,
+           brightness: Brightness.light,
+        ),
+        themeMode: ThemeMode.system,
+        // Router
+        routeInformationParser: router.routeInformationParser,
+        routerDelegate: router.routerDelegate,
+        // Global context
+        scaffoldMessengerKey: scaffoldMessengerKey,
+        );
   }
 }
 
@@ -111,6 +107,30 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            TextButton(
+               onPressed: () {
+                 GoRouter.of(context).pushNamed(RouteConstants.carlosRouteName);
+               },
+               child: const Text('Carlos'),
+            ),
+            TextButton(
+               onPressed: () {
+                 GoRouter.of(context).pushNamed(RouteConstants.davidRouteName);
+               },
+               child: const Text('David'),
+            ),
+            TextButton(
+               onPressed: () {
+                 GoRouter.of(context).pushNamed(RouteConstants.joseRouteName);
+               },
+               child: const Text('José'),
+            ),
+            TextButton(
+               onPressed: () {
+                 GoRouter.of(context).pushNamed(RouteConstants.jeremyRouteName);
+               },
+               child: const Text('Jeremy'),
             ),
           ],
         ),
