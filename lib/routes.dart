@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterperu/carlos.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutterperu/main.dart';
 import 'package:flutterperu/test.dart';
@@ -42,7 +43,7 @@ class MyRouter {
           name: RouteConstants.carlosRouteName,
           path: '/carlos',
           pageBuilder: (context, state) {
-            return MaterialPage(child: TestPage());
+            return MaterialPage(child: CarlosPage());
           },
         ),
         GoRoute(
