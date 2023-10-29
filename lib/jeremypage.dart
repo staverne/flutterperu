@@ -2,23 +2,14 @@ import 'package:flutter/material.dart';
 
 /// Flutter code sample for [NavigationBar].
 
-class JeremyPage extends StatelessWidget {
+class JeremyPage extends StatefulWidget {
   const JeremyPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(home: NavigationExample());
-  }
+  State<JeremyPage> createState() => _JeremyPageState();
 }
 
-class NavigationExample extends StatefulWidget {
-  const NavigationExample({super.key});
-
-  @override
-  State<NavigationExample> createState() => _NavigationExampleState();
-}
-
-class _NavigationExampleState extends State<NavigationExample> {
+class _JeremyPageState extends State<JeremyPage> {
   int currentPageIndex = 0;
   NavigationDestinationLabelBehavior labelBehavior =
       NavigationDestinationLabelBehavior.alwaysShow;
